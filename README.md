@@ -29,11 +29,12 @@ spring.datasource.password=1234567
 
 ## Endpoints and testing the app
 The application has 5 rest services that allows to: save, modify, list, list by SKU and delete, examples from postman will be shown below:
-```python
+
 
 # Save Method
-
+```python
 POST, URL: http://localhost:8080/v1/stock/saveProduct
+
 Body
 
     {
@@ -49,10 +50,13 @@ Body
     "https://falabella.scene7.com/is/image/Falabella/8406270_4"
   							]
     }
+```
 
 # Modify Method
+```python
 
 PUT, URL: http://localhost:8080/v1/stock/editProduct/{id}
+
 URL Example: http://localhost:8080/v1/stock/editProduct/1
 
 Body
@@ -70,10 +74,13 @@ Body
     "https://falabella.scene7.com/is/image/Falabella/8406270_4"
   							]
     }
+```
 
 # Delete Method
+```python
 
 DELETE, URL: http://localhost:8080/v1/stock/deleteProduct/{id}
+
 URL Example: http://localhost:8080/v1/stock/editProduct/1
 
 Body
@@ -91,21 +98,23 @@ Body
     "https://falabella.scene7.com/is/image/Falabella/8406270_4"
   							]
     }
-
+```
 #  List by SKU Method
+```python
 
-POST, URL: http://localhost:8080/v1/stock/getProductbySKU/FAL-8406276
-URL Example: http://localhost:8080/v1/stock/editProduct/1
+POST, URL: http://localhost:8080/v1/stock/getProductbySKU/{sku}
 
-
-# List All Products
- 
-GET, URL: http://localhost:8080/v1/stock/listProducts
-
-
-
+URL Example: http://localhost:8080/v1/stock/getProductbySKU/FAL-8406276
 
 ```
+
+# List All Products
+ ```python
+
+GET, URL: http://localhost:8080/v1/stock/listProducts
+
+```
+
 
 ## Technical Details
 
